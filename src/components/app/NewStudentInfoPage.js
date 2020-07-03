@@ -8,14 +8,14 @@ function NewStudentInfoPage() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
-    const [age, setAge] = useState(0);
+    const [age, setAge] = useState('');
     const [location, setLocation] = useState('');
     const [fathersName, setFathersName] = useState('');
     const [mothersName, setMothersName] = useState('');
     const [hscName, setHscName] = useState('');
-    const [hscMarks, setHscMarks] = useState(0.0);
+    const [hscMarks, setHscMarks] = useState('');
     const [sscName, setSscName] = useState('');
-    const [sscMarks, setSscMarks] = useState(0.0);
+    const [sscMarks, setSscMarks] = useState('');
 
     const [checkingExistingStatus, setcheckingExistingStatus] = useState(true);
     const [isExistingStudent, setIsExistingStudent] = useState(false);
