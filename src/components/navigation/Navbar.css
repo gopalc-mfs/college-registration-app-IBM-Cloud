@@ -1,0 +1,10 @@
+.nav-wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
