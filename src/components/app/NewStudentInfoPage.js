@@ -31,7 +31,7 @@ function NewStudentInfoPage() {
     } = useContext(AuthContext);
 
     useEffect(() => {
-        console.log('activeUser', activeUser);
+        // console.log('activeUser', activeUser);
         if (activeUser.email && activeUser.accessToken) {
 
             var getConfig = {
@@ -45,7 +45,7 @@ function NewStudentInfoPage() {
 
             axios.get('https://10a7902a.eu-gb.apigw.appdomain.cloud/sim/get-student-info', getConfig)
                 .then((resp) => {
-                    console.log("Response received: ", resp);
+                    // console.log("Response received: ", resp);
                     if (resp.data.docs.length > 0) {
                         var doc = resp.data.docs[0];
 
@@ -74,7 +74,8 @@ function NewStudentInfoPage() {
                     }
                 })
                 .catch((err) => {
-                    console.log("AXIOS ERROR: ", err);
+                    // console.log("AXIOS ERROR: ", err);
+                    M.toast({ html: `<b>AXIOS ERROR: ${err}</b>`, classes: 'red darken-1 ' });
                 })
         }
     }, [activeUser])
@@ -147,7 +148,7 @@ function NewStudentInfoPage() {
                 }
             })
             .catch((err) => {
-                console.log("AXIOS ERROR: ", err);
+                // console.log("AXIOS ERROR: ", err);
                 M.toast({ html: `<b>AXIOS ERROR: ${err}</b>`, classes: 'red darken-1 ' });
                 setSendingDataToCloud(false);
             })
@@ -189,7 +190,7 @@ function NewStudentInfoPage() {
                     }
                 })
                 .catch((err) => {
-                    console.log("AXIOS ERROR: ", err);
+                    // console.log("AXIOS ERROR: ", err);
                     M.toast({ html: `<b>AXIOS ERROR: ${err}</b>`, classes: 'red darken-1 ' });
                     setSendingDataToCloud(false);
                 })
