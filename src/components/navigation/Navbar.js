@@ -19,7 +19,7 @@ function Navbar() {
             <nav className="white">
                 <div className="nav-wrapper">
                     <a href="#!" className="brand-logo left indigo-text text-darken-4">Academia College</a>
-                    <ul className="right hide-on-med-and-down">
+                    <ul className="right">
                         {!isAuthenticated ? (
                             <Fragment>
                                 <li>
